@@ -655,7 +655,7 @@ model GetOperationStatusResponse {
   results: Array<ResourceOperation>;
 }
 
-@doc("Static read response for the singleton bulk VM operations proxy endpoint")
+@doc("Static read response for the singleton bulkVmOperations proxy endpoint")
 model BulkVmOperationsReadResponse {
   @doc("Echoes the singleton proxy resource name")
   name: "bulkVmOperations";

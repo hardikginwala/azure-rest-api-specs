@@ -861,7 +861,7 @@
     },
     "BulkVmOperationsReadResponse": {
       "type": "object",
-      "description": "Static read response for the singleton bulk VM operations proxy endpoint",
+      "description": "Static read response for the singleton bulkVmOperations proxy endpoint",
       "properties": {
         "name": {
           "type": "string",
