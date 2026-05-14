@@ -83,29 +83,9 @@ alias DiffDiskPlacement = BulkActionsShared.DiffDiskPlacement;
 
 alias DiskCreateOptionTypes = BulkActionsShared.DiskCreateOptionTypes;
 
-union OperatingSystemTypes {
-  string,
+alias OperatingSystemTypes = BulkActionsShared.OperatingSystemTypes;
 
-  @doc("Windows OS")
-  Windows: "Windows",
-
-  @doc("Linux OS")
-  Linux: "Linux",
-}
-
-@doc("Specifies the caching requirements. Possible values are: **None,** **ReadOnly,** **ReadWrite.** The default values are: **None for Standard storage. ReadOnly for Premium storage**")
-union CachingTypes {
-  string,
-
-  @doc("Caching type:None")
-  None: "None",
-
-  @doc("Caching type:ReadOnly")
-  ReadOnly: "ReadOnly",
-
-  @doc("Caching type:ReadWrite")
-  ReadWrite: "ReadWrite",
-}
+alias CachingTypes = BulkActionsShared.CachingTypes;
 
 /**
  * Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
@@ -150,15 +130,7 @@ alias WinRMConfiguration = BulkActionsShared.WinRMConfiguration;
 
 alias WinRMListener = BulkActionsShared.WinRMListener;
 
-union SettingNames {
-  string,
-
-  @doc("AutoLogon mode")
-  AutoLogon: "AutoLogon",
-
-  @doc("FirstLogonCommands mode")
-  FirstLogonCommands: "FirstLogonCommands",
-}
+alias SettingNames = BulkActionsShared.SettingNames;
 
 /**
  * Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true
@@ -169,15 +141,7 @@ alias WindowsPatchAssessmentMode = BulkActionsShared.WindowsPatchAssessmentMode;
 
 alias WindowsVMGuestPatchAutomaticByPlatformRebootSetting = BulkActionsShared.WindowsVMGuestPatchAutomaticByPlatformRebootSetting;
 
-union ProtocolTypes {
-  string,
-
-  @doc("Http protocol")
-  Http: "Http",
-
-  @doc("Https protocol")
-  Https: "Https",
-}
+alias ProtocolTypes = BulkActionsShared.ProtocolTypes;
 
 /**
  * Specifies the Linux operating system settings on the virtual machine. For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
@@ -277,4 +241,3 @@ alias SecurityTypes = BulkActionsShared.SecurityTypes;
 alias Mode = BulkActionsShared.Mode;
 
 alias Modes = BulkActionsShared.Modes;
-

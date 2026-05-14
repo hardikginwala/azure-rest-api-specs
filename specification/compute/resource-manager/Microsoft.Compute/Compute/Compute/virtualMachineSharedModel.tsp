@@ -11,6 +11,7 @@
 
 import "@typespec/versioning";
 import "@azure-tools/typespec-azure-resource-manager";
+import "./vmSharedTypes.tsp";
 
 using Versioning;
 using Azure.ResourceManager;
