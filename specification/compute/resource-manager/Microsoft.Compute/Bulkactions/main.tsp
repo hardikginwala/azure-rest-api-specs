@@ -12,11 +12,11 @@ using TypeSpec.Versioning;
 @armProviderNamespace
 @service(#{ title: "Azure Compute resource management API." })
 @versioned(Versions)
-namespace Microsoft.Compute;
-
-/** ComputeSchedule API versions */
-enum Versions {
-  /** 2026-04-06-preview version */
-  @armCommonTypesVersion(Azure.ResourceManager.CommonTypes.Versions.v6)
-  `2026-04-06-preview`,
+namespace Microsoft.Compute.BulkActions {
+  /** ComputeSchedule API versions */
+  enum Versions {
+    /** 2026-04-06-preview version */
+    @armCommonTypesVersion(Azure.ResourceManager.CommonTypes.Versions.v6)
+    `2026-04-06-preview`,
+  }
 }

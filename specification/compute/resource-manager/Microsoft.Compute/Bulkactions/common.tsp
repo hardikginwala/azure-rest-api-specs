@@ -3,6 +3,7 @@ import "@typespec/rest";
 import "@typespec/versioning";
 import "@azure-tools/typespec-azure-core";
 import "@azure-tools/typespec-azure-resource-manager";
+import "./shared-types.tsp";
 
 using Azure.ResourceManager;
 
@@ -14,14 +15,7 @@ model SubResource {
   id?: string;
 }
 
-@doc("Describes a reference to Key Vault Secret")
-model KeyVaultSecretReference {
-  @doc("The URL referencing a secret in a Key Vault.")
-  secretUrl: string;
-
-  @doc("The relative URL of the Key Vault containing the secret.")
-  sourceVault: SubResource;
-}
+alias KeyVaultSecretReference = BulkActionsShared.KeyVaultSecretReference;
 
 /**
  * The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.
